@@ -3,8 +3,11 @@
 /* Body styles */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+   margin: 0;
+   padding: 0;
+   background-image: url(C:\Users\surfc\IdeaProjects\Portfolio\src\portfolio image1.jpg);
+   background-size: cover;
+   background-position: center;
 }
 
 /* Header styles */
