@@ -1,3 +1,4 @@
+import emailjs from 'emailjs-com';
 // script.js
 
 // Smooth scrolling for navigation links
@@ -35,20 +36,36 @@ function handleFormSubmit(event) {
   const email = emailInput.value;
   const message = messageInput.value;
 
-  // Perform form validation and submission
+  // Perform form validation
   if (name && email && message) {
-    // Perform form submission logic here
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Message:', message);
-
-    // Reset form fields
-    nameInput.value = '';
-    emailInput.value = '';
-    messageInput.value = '';
-
-    alert('Message sent successfully!');
+    // Send form data using EmailJS
+    sendEmailWithService(name, email, message);
   } else {
     alert('Please fill in all the fields.');
   }
+}
+function sendEmailWithService(name, email, message) {
+  // Initialize EmailJS
+  emailjs.init('Zaeju7Hxxhxk4eS0x');
+
+  // Prepare email parameters
+  const emailParams = {
+    from_name: name,
+    from_email: email,
+    message: message
+  };
+
+  // Send email using EmailJS service
+  emailjs.send('service_fymigef', 'template_60bvziq', emailParams, 'Zaeju7Hxxhxk4eS0x')
+    .then(function(response) {
+      console.log('Email sent successfully:', response.status, response.text);
+      // Reset form fields
+      nameInput.value = '';
+      emailInput.value = '';
+      messageInput.value = '';
+      alert('Message sent successfully!');
+    }, function(error) {
+      console.error('Error sending email:', error);
+      alert('Failed to send message. Please try again later.');
+    });
 }
