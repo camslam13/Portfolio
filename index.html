@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com/dist/email.min.js"></script>
+</head>
+<body>
+<header>
+    <h1>My Portfolio</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home">
+    <h2>Welcome to my portfolio!</h2>
+    <p>Here you can find my latest projects and learn more about me.</p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+        <h3>Group Project: Number Conversion, Skill Searcher, and Translator</h3>
+        <p>This project was done in a group of 4. The goal of this project was to create three different programs to complete their own tasks. Task one was to convert decimal numbers into hexadecimal, binary, and octal form. The second task was to create a skill searcher to search for different people via skill search. The final task was a translator that takes in English and displays the word or phrase in a translated language. </p>
+        <a href="#">Demo</a>
+        <a href="https://github.com/camslam13/Number-conversion-langauge-translation-and-skill-searcher">GitHub</a>
+    </div>
+    <div class="project">
+        <h3>Project 2</h3>
+        <p>Description of Project 2</p>
+        <a href="#">Demo</a>
+        <a href="#">GitHub</a>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm a senior at Virginia Commonwealth University pursuing a bachelor's degree in Computer Science, and I'm passionate about all things related to technology and programming. With a solid foundation in Java, JavaScript, HTML/CSS, C, Python, C#, C++, Linux, and object-oriented programming, I enjoy exploring various aspects of computer science and pushing the boundaries of what I can create. Whether it's designing intuitive user interfaces, developing efficient algorithms, or troubleshooting complex issues, I thrive in problem-solving environments. Continuously expanding my knowledge and staying up-to-date with the latest industry trends, I strive to contribute to the evolving world of technology and make a positive impact through my work. </p>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+        <label for="nameInput">Name:</label>
+        <input id="nameInput" type="text" placeholder="Name" required>
+
+        <label for="emailInput">Email:</label>
+        <input id="emailInput" type="email" placeholder="Email" required>
+
+        <label for="messageInput">Message:</label>
+        <textarea id="messageInput" placeholder="Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
